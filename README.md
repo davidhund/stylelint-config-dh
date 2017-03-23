@@ -1,6 +1,6 @@
 # stylelint-config-dh
 
-[![NPM version](http://img.shields.io/npm/v/stylelint-config-suitcss.svg)](https://www.npmjs.org/package/stylelint-config-dh)
+[![NPM version](http://img.shields.io/npm/v/stylelint-config-dh.svg)](https://www.npmjs.org/package/stylelint-config-dh)
 
 > Shareable config for stylelint.
 
