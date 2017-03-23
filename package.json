@@ -1,0 +1,51 @@
+{
+  "name": "stylelint-config-dh",
+  "version": "0.1.0",
+  "description": "Shareable config for stylelint. Personal preference of David Hund, Valued Standards.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:davidhund/stylelint-config-dh.git"
+  },
+  "homepage": "https://github.com/davidhund/stylelint-config-dh",
+  "bugs": {
+    "url": "https://github.com/davidhund/stylelint-config-dh/issues",
+    "email": "david@valuedstandards.com"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "valuedstandards",
+    "David",
+    "Hund"
+  ],
+  "author": {
+    "name": "David Hund",
+    "email": "david@valuedstandards.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-stylelint": "^6.0.0",
+    "npmpub": "^3.0.1",
+    "stylelint": "^7.9.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^7.9.0"
+  },
+  "scripts": {
+    "lint": "eslint . --ignore-path .gitignore",
+    "release": "npmpub",
+    "pretest": "npm run lint",
+    "test": "Echo \"implement tests!\""
+  },
+  "eslintConfig": {
+    "extends": [ "stylelint" ],
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  }
+}
