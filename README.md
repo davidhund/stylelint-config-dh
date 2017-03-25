@@ -30,3 +30,7 @@ For example, to change the indentation to spaces:
   }
 }
 ```
+
+## [CHANGELOG](CHANGELOG.md)
+
+## [LICENSE](LICENSE)
