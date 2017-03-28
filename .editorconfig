@@ -8,3 +8,17 @@ indent_size = 2
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+## SPACE indentation
+[*.{yml,yaml}]
+indent_style = space
+
+# Our test-CSS in __tests__
+# needs TABS (but it a .js)
+# So we need to explicityly change
+# this file
+[__tests__/**.js]
+indent_style = tab

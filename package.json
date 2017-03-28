@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-dh",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Shareable config for stylelint. Personal preference of David Hund, Valued Standards.",
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "ava": "^0.18.2",
     "eslint": "^3.18.0",
     "eslint-config-stylelint": "^6.0.0",
     "np": "^2.13.1",
@@ -37,10 +38,11 @@
     "stylelint": "^7.9.0"
   },
   "scripts": {
+    "ava": "ava --verbose \"__tests__/**/*.js\"",
     "lint": "eslint . --ignore-path .gitignore",
     "release": "np",
     "pretest": "npm run lint",
-    "test": "Echo \"implement tests!\""
+    "test": "npm run ava"
   },
   "eslintConfig": {
     "extends": [
