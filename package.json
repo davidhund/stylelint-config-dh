@@ -39,7 +39,7 @@
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "eslint . --ignore-pattern '__tests__/*.js' --ignore-path .gitignore",
     "release": "np",
     "pretest": "npm run lint",
     "test": "npm run ava"
