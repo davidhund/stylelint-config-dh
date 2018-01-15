@@ -19,9 +19,9 @@ module.exports = {
       true,
       {
         "ignoreProperties": [
-          "/^font-smooth/",
-        ],
-      },
+          "/^font-smooth/"
+        ]
+      }
     ],
     "property-no-vendor-prefix": true,
     "declaration-no-important": true,
@@ -39,18 +39,17 @@ module.exports = {
     "media-feature-colon-space-before": "never",
     "media-query-list-comma-newline-after": "never-multi-line",
     "media-query-list-comma-newline-before": "never-multi-line",
-    "selector-no-id": true,
     "comment-empty-line-before": [
       "always",
       {
         "except": [
-          "first-nested",
+          "first-nested"
         ],
         "ignore": [
           "after-comment",
-          "stylelint-commands",
-        ],
-      },
-    ],
-  },
+          "stylelint-commands"
+        ]
+      }
+    ]
+  }
 }
