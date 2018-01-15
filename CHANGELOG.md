@@ -1,3 +1,8 @@
+# 0.3.0
+
+- Changed: removed deprecated Stylelint rules
+- Updated: dependancies
+
 # 0.2.0
 
 - Added: simple tests
