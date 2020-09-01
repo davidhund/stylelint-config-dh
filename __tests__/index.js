@@ -1,9 +1,8 @@
-import config from "../"
-import stylelint from "stylelint"
-import test from "ava"
+const config = require("../");
+const stylelint = require("stylelint");
+const test = require("ava");
 
-const validCss = (
-`
+const validCss = `
 /**
 * Multi-line comment
 */
@@ -64,40 +63,47 @@ const validCss = (
 
 }
 
-`)
+`;
 
-const invalidCss = (
-`a {
+const invalidCss = `a {
 	top: 0.2em;
 	color: #fff;
 }
 
-`)
+`;
 
-test("no warnings with valid css", t => {
-	return stylelint.lint({
-		code: validCss,
-		config,
-	})
-	.then(data => {
-		const { errored, results } = data
-		const { warnings } = results[0]
-		t.falsy(errored, "no errored")
-		t.is(warnings.length, 0, "flags no warnings")
-	})
-})
+test("no warnings with valid css", (t) => {
+	return stylelint
+		.lint({
+			code: validCss,
+			config,
+		})
+		.then((data) => {
+			const { errored, results } = data;
+			const { warnings } = results[0];
 
-test("two warnings with invalid css", t => {
-	return stylelint.lint({
-		code: invalidCss,
-		config,
-	})
-	.then(data => {
-		const { errored, results } = data
-		const { warnings } = results[0]
-		t.truthy(errored, "errored")
-		t.is(warnings.length, 2, "flags two warnings")
-		t.is(warnings[0].text, "Expected \"#fff\" to be \"#FFF\" (color-hex-case)")
-		t.is(warnings[1].text, "Unexpected leading zero (number-leading-zero)", "correct warning text")
-	})
-})
+			t.falsy(errored, "no errored");
+			t.is(warnings.length, 0, "flags no warnings");
+		});
+});
+
+test("two warnings with invalid css", (t) => {
+	return stylelint
+		.lint({
+			code: invalidCss,
+			config,
+		})
+		.then((data) => {
+			const { errored, results } = data;
+			const { warnings } = results[0];
+
+			t.truthy(errored, "errored");
+			t.is(warnings.length, 2, "flags two warnings");
+			t.is(warnings[0].text, 'Expected "#fff" to be "#FFF" (color-hex-case)');
+			t.is(
+				warnings[1].text,
+				"Unexpected leading zero (number-leading-zero)",
+				"correct warning text"
+			);
+		});
+});

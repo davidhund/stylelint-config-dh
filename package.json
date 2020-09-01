@@ -28,21 +28,22 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.24.0",
-    "eslint": "^4.15.0",
-    "eslint-config-stylelint": "^8.1.0",
-    "np": "^2.18.3",
-    "stylelint": "^8.4.0"
+    "ava": "^3.12.1",
+    "eslint": "^7.8.0",
+    "eslint-config-stylelint": "^12",
+    "np": "^6.5.0",
+    "stylelint": "^13.7.0"
   },
   "peerDependencies": {
-    "stylelint": "^8.4.0"
+    "stylelint": "^13.7.0"
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
     "lint": "eslint . --ignore-pattern '__tests__/*.js' --ignore-path .gitignore",
     "release": "np",
     "pretest": "npm run lint",
-    "test": "npm run ava"
+    "stest": "npm run ava",
+    "test": "ava"
   },
   "eslintConfig": {
     "extends": [
