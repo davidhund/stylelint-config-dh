@@ -28,14 +28,14 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "ava": "^3.12.1",
-    "eslint": "^7.8.0",
-    "eslint-config-stylelint": "^12",
-    "np": "^6.5.0",
-    "stylelint": "^13.7.0"
+    "ava": "^3",
+    "eslint": "^8",
+    "eslint-config-stylelint": "^15",
+    "np": "^7",
+    "stylelint": "^14"
   },
   "peerDependencies": {
-    "stylelint": "^13.7.0"
+    "stylelint": "^14"
   },
   "scripts": {
     "ava": "ava --verbose \"__tests__/**/*.js\"",
@@ -51,6 +51,14 @@
     ],
     "parserOptions": {
       "sourceType": "module"
+    },
+    "globals": {
+      "module": true
+    },
+    "settings": {
+      "jest": {
+        "version": 27
+      }
     }
   }
 }

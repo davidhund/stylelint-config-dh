@@ -1,3 +1,11 @@
+# 0.5.0
+
+- Changed: ESlint config
+- Updated: dependancies
+# 0.4.0
+
+- Changed: tests
+- Updated: dependancies
 # 0.3.0
 
 - Changed: removed deprecated Stylelint rules
